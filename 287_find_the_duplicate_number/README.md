@@ -44,15 +44,19 @@ you find a bit equal to 0 before you change it, then that is a repeated number.
 ## Final Result
 
 Approach I: (this modify the original array)
+
 ![final result: leetcode.com](summary_image.png)
 
 Related code:
+
 ![challenge solution (approach I)](code_approach_I.png)
 
 Approach II:
+
 ![final result approach II: leetcode.com](aproach_II.png)
 
 Related code (applying the follow up):
+
 ![challenge solution (approach I)](code_approach_II.png)
 
 **Note**: current code in this folder is approach II but you can see the first approach checking the commit's id d2b4eac
