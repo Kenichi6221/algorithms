@@ -1,4 +1,15 @@
 from typing import List
+# from sys import stdin
+import sys
+# next line redirect input from file as console input
+# is required only with microsoft, then in unix systems
+# you can delete or coment it.
+sys.stdin = open("structures\segment_tree\input.txt", "r")
+
+# next line redirect input from file as console input
+# is required only with microsoft, then in unix systems
+# you can delete or coment it.
+sys.stdout = open('structures\segment_tree\output.txt', 'w')
 
 class SegmentTree:
 
@@ -75,17 +86,6 @@ class SegmentTree:
     else:
       return p1 if self.__data[p1]>=self.__data[p2] else p2
 
-  # Util method print segment data
-  def printSegmentTrees(self):
-    print("min segment tree")
-    for element in self.__segmentsMin:
-      print("{} ".format(self.__data[element]),end=" ")
-
-    print("\nmax segment tree")
-    for element in self.__segmentMax:
-      print("{} ".format(self.__data[element]),end=" ")
-    print("")
-
 def printMinQueryResult(segment:SegmentTree ,start:int,end:int):
   minTeplate = "The min value for [{},{}] is {}"
   minimumValue = segment.getMinValue(start,end)
@@ -97,20 +97,21 @@ def printMaxQueryResult(segment:SegmentTree ,start:int,end:int):
   print(maxTeplate.format(start,end,maximumValue))
 
 if __name__ == '__main__':
-    collection:List[int] = [9,8,7,6,5,4,3,2,1]
-    size = len(collection)
+    for line in sys.stdin:
+      collection:List[int] = [int(element) for element in line.split(",")]
+      print("\noriginal collection: {}\n".format(collection))
+      size = len(collection)
 
-    segment = SegmentTree(collection)
-    segment.printSegmentTrees()
+      segment = SegmentTree(collection)
 
-    ## asking aboutt min and max values between [start,end] intervals
-    print("\noriginal collection: {}".format(collection))
-    print("asking about min values")
-    printMinQueryResult(segment,0,size-1)
-    printMinQueryResult(segment,0,size//2)
-    printMinQueryResult(segment,size//2,size-1)
+      ## asking aboutt min and max values between [start,end] intervals
+      print("Asking about min values:")
+      printMinQueryResult(segment,0,size-1)
+      printMinQueryResult(segment,0,size//2)
+      printMinQueryResult(segment,size//2,size-1)
 
-    print("\nasking about max values")
-    printMaxQueryResult(segment,0,size-1)
-    printMaxQueryResult(segment,0,size//2)
-    printMaxQueryResult(segment,size//2,size-1)
+      print("\nAsking about max values:")
+      printMaxQueryResult(segment,0,size-1)
+      printMaxQueryResult(segment,0,size//2)
+      printMaxQueryResult(segment,size//2,size-1)
+      print("___________________________________________________________________")

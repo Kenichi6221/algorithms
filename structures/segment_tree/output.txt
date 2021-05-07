@@ -1,0 +1,26 @@
+
+original collection: [18, 17, 13, 19, 15, 11, 20]
+
+Asking about min values:
+The min value for [0,6] is 11
+The min value for [0,3] is 13
+The min value for [3,6] is 11
+
+Asking about max values:
+The max value for [0,6] is 20
+The max value for [0,3] is 19
+The max value for [3,6] is 20
+___________________________________________________________________
+
+original collection: [1, 7, 8, 9, 19, 11, 21, 8, 11, 0]
+
+Asking about min values:
+The min value for [0,9] is 0
+The min value for [0,5] is 1
+The min value for [5,9] is 0
+
+Asking about max values:
+The max value for [0,9] is 21
+The max value for [0,5] is 19
+The max value for [5,9] is 21
+___________________________________________________________________
