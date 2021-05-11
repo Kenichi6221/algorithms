@@ -1,4 +1,12 @@
-from sys import stdin
+import sys
+
+import os
+current_folder = os.path.dirname(os.path.realpath(__file__))
+# redirect input from input.txt file
+sys.stdin = open("{}\\input.txt".format(current_folder), "r")
+
+# redirect output tou output.txt file
+sys.stdout = open('{}\\output.txt'.format(current_folder), 'w')
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
@@ -16,7 +24,7 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    for line in stdin:
+    for line in sys.stdin:
       line = line.replace("\n","")
       longestSubstring = solution.lengthOfLongestSubstring(line)
       print(longestSubstring)
