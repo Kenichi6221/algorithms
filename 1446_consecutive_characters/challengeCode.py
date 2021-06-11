@@ -1,5 +1,3 @@
-import heapq
-
 ## only in local windows test
 import os
 import sys
@@ -17,24 +15,17 @@ class Solution:
     def maxPower(self, s: str) -> int:
         dic = {}
         max_continous = 1
+        globalMax = 1
         for index, element in enumerate(s):
             if index>0 and s[index]==s[index-1]:
-              max_continous +=1
-              if element in dic: max_continous = max(max_continous,dic[element])
-              dic[element]= max_continous
+                max_continous +=1
+                if element in dic:
+                    max_continous = max(max_continous,dic[element])
+                dic[element]= max_continous
+                globalMax = max(globalMax, dic[element])
             else:
-              max_continous = 1
-
-        total_repeated_characters = len(dic)
-        if total_repeated_characters == 0: return 1
-        if total_repeated_characters == 1: return dic[list(dic)[0]]
-
-        max_heap = []
-        for value in dic.values():
-            heapq.heappush(max_heap,(-value))
-
-        dic=None
-        return -heapq.heappop(max_heap)
+                max_continous = 1
+        return globalMax
 
 if __name__ == '__main__':
     s = Solution()
