@@ -13,18 +13,17 @@ sys.stdout = open('{}\\output.txt'.format(current_folder), 'w')
 
 class Solution:
     def maxPower(self, s: str) -> int:
-        dic = {}
-        max_continous = 1
-        globalMax = 1
-        for index, element in enumerate(s):
-            if index>0 and s[index]==s[index-1]:
-                max_continous +=1
-                if element in dic:
-                    max_continous = max(max_continous,dic[element])
-                dic[element]= max_continous
-                globalMax = max(globalMax, dic[element])
+        max_continous = globalMax = 1
+        start,explorer = 0,1
+        size = len(s)
+        while explorer<size:
+            if s[start] == s[explorer]:
+                max_continous += 1
+                globalMax = max(globalMax,max_continous)
             else:
                 max_continous = 1
+            start+=1
+            explorer+=1
         return globalMax
 
 if __name__ == '__main__':
