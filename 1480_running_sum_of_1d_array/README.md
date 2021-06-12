@@ -4,7 +4,7 @@
 
 The above image description regarded to this challege was taked from
 
-[{challenge page}:{challenge number}. {challenge title}](challenge url)
+[leetcode:1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
 
 ## Analysis:
 
