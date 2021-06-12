@@ -20,6 +20,12 @@ short in time too.
 
 ## [Final result](https://leetcode.com/problems/contains-duplicate/submissions/)
 
-![](summary_image.png)
+### Dictionary approach:
+
+![dictionary approach](summary_image_dictionary_approach.png)
+
+### Heap and check approach
+
+![heap and check approach](summary_image.png)
 
 **Related topics**: heap, arrays
