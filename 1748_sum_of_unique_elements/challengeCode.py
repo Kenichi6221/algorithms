@@ -13,16 +13,16 @@ sys.stdout = open('{}\\output.txt'.format(current_folder), 'w')
 
 class Solution:
     def sumOfUnique(self, nums: List[int]) -> int:
-        dictionary = {}
-        total = 0
-        for element in nums:
-            if element in dictionary:
-                total -= dictionary[element]
-                dictionary[element] = 0
-            else:
-                total += element
-                dictionary[element] = element
-        return total
+      dictionary = [-1]*101
+      total = 0
+      for element in nums:
+          if dictionary[element] != -1:
+              total -= dictionary[element]
+              dictionary[element] = 0
+          else:
+              total += element
+              dictionary[element] = element
+      return total
 
 if __name__ == '__main__':
     s = Solution()
