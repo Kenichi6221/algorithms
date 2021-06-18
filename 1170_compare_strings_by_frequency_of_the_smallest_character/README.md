@@ -1,10 +1,10 @@
 # Description:
 
-![challenge image from: {challenge page}.com](challenge.png)
+![challenge image from: https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/](challenge.png)
 
 The above image description regarded to this challege was taked from
 
-[{challenge page}:1170. Compare Strings by Frequency of the Smallest Character](https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/)
+[Leetcode:1170. Compare Strings by Frequency of the Smallest Character](https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/)
 
 ## Analysis:
 
