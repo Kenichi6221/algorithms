@@ -4,7 +4,7 @@
 
 The above image description regarded to this challege was taked from
 
-[leetcode: 1170. Compare Strings by Frequency of the Smallest Character](https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/)
+[leetcode: 2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 
 ## Analysis:
 
