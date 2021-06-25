@@ -30,8 +30,3 @@ class Solution:
             _,index =  heapq.heappop(heap_processingTimei)
             answer.append(index)
         return answer
-
-
-if __name__ == '__main__':
-    s = Solution()
-    print(s.getOrder([[5,2],[7,2],[9,4],[6,3],[5,10],[1,1]]))
