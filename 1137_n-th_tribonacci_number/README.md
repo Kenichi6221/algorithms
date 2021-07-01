@@ -25,8 +25,17 @@ In that case this algorithm , is too slow because apply several times the same c
 even though this is good first step because, now we can avoid redundant evaluations using a dictionary to
 get each value only once time.
 
+In addition we can improve the memory use, avoiding the recursion, so we can use a loop to calculate from
+last nth term until n required term.
+
 ## Final Result
 
+### Dictionary + Recursion (check memory use):
+
 ![final result recurtion plus dictionary: {challenge page}.com](summary.png)
+
+### Dictionary + Recursion (check memory use):
+
+![final result loop plus dictionary: {challenge page}.com](summary_loop.png)
 
 **Related topics**: Recursion, fibonacci
