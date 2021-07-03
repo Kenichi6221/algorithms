@@ -21,8 +21,24 @@ When I had created a new subset
 
 After above operations: result = totalized_array[0]
 
+## Aproach II: [Powersets](https://en.wikipedia.org/wiki/Power_set)
+
+Here, I will use binaries to validate if one element will be included or not inside the new subset, so 1 mean includes the kth element and 0 mean exclude that element.
+
+In addition, total subsets will be 2^n where n = (len(nums)), so its possible use a loop from 0 to 2^n - 1 and I will use each element in this count in its binary version.
+
+**Important to remember:**
+
+- if num & ( 1 << K-1 ) > 0 : kth bit is on
+
 ## Final Result
 
-![final result: {challenge page}.com](summary_approach_I.png)
+### Bactracking approach:
+
+![final result backtracking approach: leetcode.com](summary_approach_I.png)
+
+### Powerset approach:
+
+![final result powerset approach: leetcode.com](summary_approach_II.png)
 
 **Related topics**: backtracking, [Powersets](https://en.wikipedia.org/wiki/Power_set)
