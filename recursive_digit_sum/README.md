@@ -6,6 +6,20 @@ The above image description regarded to this challege was taked from
 
 [hackerrank:Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem)
 
+### Recursive approach:
+
+Here, I can notice that is not neccesary concatenate k times the n number, so I will do k_digit x k instead concatenate the original number as folow:
+
+n = 123 k = 3
+
+Becomes in: 123123123 => (1+2+3)+(1+2+3)+(1+2+3) => (1x3)+(2x3)+(3x3) = (1+2+3)\*3
+
+From here, I can use the following elents to apply a recursion:
+
+- Case base: len(n) == 1
+- Process to apply: sum each digit and after multiply k times
+- After first call k = 1
+
 ### Modular Math Approach:
 
 Here, is possible apply some modular maths, so we can notice that:
@@ -51,6 +65,10 @@ Example:
 8 concatenated k = 4
 8888 = 8x(1+10+100+1000)
 8888 mod 9 = [(8 mod 9)* (4 mod 9)] mod 9 = 5
+
+### Final result: recursion result
+
+![final result: hackerrank.com](Summary_Recursion.png)
 
 ### Final result: Modular approach
 
